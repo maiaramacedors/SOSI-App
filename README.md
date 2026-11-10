@@ -1,4 +1,4 @@
-# SOSI – Sistema Operacional de Serviços de Indaiatuba 📱
+# SOSI – Sistema Operacional de Serviços de Indaiatuba
 
 Aplicativo Android que conecta **cidadãos** e **prefeitura**: o cidadão registra problemas da cidade — buracos, postes apagados, semáforos quebrados, lixo acumulado — e acompanha cada etapa até a solução. A prefeitura recebe as ocorrências, atualiza o status e responde ao cidadão em tempo real.
 
