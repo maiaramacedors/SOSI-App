@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- FormCidadao.jsx — "Nova Ocorrência" (versão compacta para celular)
-     POST /form  {
-        motivo:      ELOGIO / RECLAMACAO / SUGESTAO  (RadioButton marcado em rgMotivo),
-        categoria:   situacoes_enum[spSituacao.pos - 1],
-        endereco:    rua + " - " + bairro,
-        dataOcorrido, descricao, anexo: "",
-        cidadao: { id, nome, celular, email }  (do usuário logado)
-     }
-     txtUsuario mostra "nome · celular" do usuário logado (no site são campos travados). -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

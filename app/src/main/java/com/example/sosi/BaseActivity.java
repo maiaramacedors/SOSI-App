@@ -25,7 +25,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 /**
- * Classe "mãe" das telas do SOSI.
  * Quem faz  "extends BaseActivity"  ganha a barra do topo e o menu lateral.
  */
 public class BaseActivity extends AppCompatActivity {
@@ -43,10 +42,6 @@ public class BaseActivity extends AppCompatActivity {
         EdgeToEdge.enable(this, SystemBarStyle.dark(Color.TRANSPARENT));
     }
 
-    /**
-     * Toda tela chama setContentView(R.layout.xxx).
-     * Aqui a gente "embrulha" essa tela dentro da gaveta (activity_base.xml).
-     */
     @Override
     public void setContentView(int layoutDaTela) {
         drawerLayout = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_base, null);
@@ -70,7 +65,7 @@ public class BaseActivity extends AppCompatActivity {
         TextView txtTagPrefeitura = findViewById(R.id.txtTagPrefeitura);
         txtTagPrefeitura.setVisibility(ehPrefeitura() ? View.VISIBLE : View.GONE);
 
-        // ☰ abre o menu
+        // abre o menu
         findViewById(R.id.btnMenu).setOnClickListener(v ->
                 drawerLayout.openDrawer(GravityCompat.START));
 
@@ -94,7 +89,7 @@ public class BaseActivity extends AppCompatActivity {
         boolean prefeitura = ehPrefeitura();
         boolean cidadao = logado && !prefeitura;
 
-        // ===== quem vê o quê =====
+        // quem vê o quê
         menu.findItem(R.id.navInicio).setVisible(!prefeitura);
         menu.findItem(R.id.navNovaOcorrencia).setVisible(cidadao);
         menu.findItem(R.id.navMeusFormularios).setVisible(cidadao);
@@ -103,7 +98,7 @@ public class BaseActivity extends AppCompatActivity {
         menu.findItem(R.id.navEntrar).setVisible(!logado);
         menu.findItem(R.id.navSair).setVisible(logado);
 
-        // ===== cabeçalho (parte vinho) =====
+        // cabeçalho
         View cabecalho = menuLateral.getHeaderView(0);
         TextView txtNomeMenu = cabecalho.findViewById(R.id.txtNomeMenu);
         TextView txtTipoMenu = cabecalho.findViewById(R.id.txtTipoMenu);
@@ -129,7 +124,7 @@ public class BaseActivity extends AppCompatActivity {
             txtTipoMenu.setText("Entre para abrir chamados");
         }
 
-        // ===== ao tocar numa opção =====
+        //  ao tocar numa opção
         menuLateral.setNavigationItemSelectedListener(item -> {
             drawerLayout.closeDrawer(GravityCompat.START);
             int id = item.getItemId();
@@ -156,7 +151,7 @@ public class BaseActivity extends AppCompatActivity {
             return true;
         });
 
-        // ===== botão "voltar" do celular fecha o menu (se estiver aberto) =====
+        //  botão "voltar" do celular fecha o menu (se estiver aberto)
         OnBackPressedCallback fecharMenu = new OnBackPressedCallback(false) {
             @Override
             public void handleOnBackPressed() {
@@ -178,7 +173,7 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
-    /** Abre outra tela (se já não estiver nela). */
+    /** Abre outra tela. */
     protected void irPara(Class<?> tela) {
         if (getClass() == tela) {
             return;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Estilos que imitam as classes CSS do site. Não dependem do tema do projeto. -->
+    <!-- Estilos que imitam as classes CSS do site. -->
 
     <!-- .page-header h2 -->
     <style name="TituloPagina">

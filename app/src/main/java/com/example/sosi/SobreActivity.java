@@ -1,8 +1,8 @@
 package com.example.sosi;
 
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.widget.TextView;
+
 
 
 public class SobreActivity extends BaseActivity {

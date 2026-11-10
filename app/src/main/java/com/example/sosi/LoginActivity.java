@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
-        // ===== pegar os componentes do XML =====
+        //  pegar os componentes do XML
         EditText edtLogin = findViewById(R.id.edtLogin);
         EditText edtSenha = findViewById(R.id.edtSenha);
         txtErro = findViewById(R.id.txtErro);
@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         Button btnGoogle = findViewById(R.id.btnGoogle);
         TextView txtEsqueciSenha = findViewById(R.id.txtEsqueciSenha);
 
-        // ===== trocar de aba =====
+        //  trocar de aba
         rgAbas.setOnCheckedChangeListener((grupo, idMarcado) -> {
             txtErro.setVisibility(View.GONE);
 
@@ -88,13 +88,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // ===== ao clicar em Cadastre-se =====
+        //  ao clicar em Cadastre-se
         txtCadastrese.setOnClickListener(v -> {
             Intent intent = new Intent(this, CadastroActivity.class);
             startActivity(intent);
         });
 
-        // ===== ao clicar em Esqueci minha senha =====
+        //  ao clicar em Esqueci minha senha
         txtEsqueciSenha.setOnClickListener(v -> {
             String email = edtLogin.getText().toString().trim();
 
@@ -115,7 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                             mostrarErro("Não foi possível enviar. Confira se o e-mail está escrito certo."));
         });
 
-        // ===== ao clicar em Entrar (e-mail e senha) =====
+        // ao clicar em Entrar (e-mail e senha)
         btnEntrar.setOnClickListener(v -> {
             String login = edtLogin.getText().toString().trim();
             String senha = edtSenha.getText().toString().trim();
@@ -157,15 +157,13 @@ public class LoginActivity extends AppCompatActivity {
                     });
         });
 
-        // ===== ao clicar em Entrar com Google =====
+        //  ao clicar em Entrar com Google
         btnGoogle.setOnClickListener(v -> entrarComGoogle());
     }
 
-    // ---------------------------------------------------------------
     // LOGIN COM GOOGLE
-    // ---------------------------------------------------------------
 
-    /** 1) Pede ao Android para mostrar as contas Google do celular. */
+    /**  Pede ao Android para mostrar as contas Google do celular. */
     private void entrarComGoogle() {
         txtErro.setVisibility(View.GONE);
 
@@ -201,7 +199,7 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-    /** 2) Pega o "crachá" (token) que o Google devolveu e entrega ao Firebase. */
+    /**  Pega o "crachá" (token) que o Google devolveu e entrega ao Firebase. */
     private void receberContaGoogle(Credential credencial) {
         if (credencial instanceof CustomCredential
                 && credencial.getType().equals(GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL)) {
@@ -231,7 +229,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    /** 3) Na primeira vez, grava nome e e-mail em  cidadaos/<uid>. */
+    /** Na primeira vez, grava nome e e-mail em  cidadaos/<uid>. */
     private void salvarCidadaoGoogle(FirebaseUser usuario) {
         Cidadao cidadao = new Cidadao(usuario.getDisplayName(), usuario.getEmail(), "", "");
 
@@ -244,7 +242,6 @@ public class LoginActivity extends AppCompatActivity {
                         mostrarErro("Erro ao salvar os dados: " + erro.getMessage()));
     }
 
-    // ---------------------------------------------------------------
 
     /** Abre a tela e fecha o Login (o "voltar" não volta para cá). */
     private void abrirTela(Class<?> tela) {

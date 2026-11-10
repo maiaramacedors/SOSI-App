@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Modal de detalhe do FormPrefeitura.jsx, como tela própria.
-     Salvar: PUT /form/status/{id}  { status: status_enum[spStatus.pos], resposta } -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

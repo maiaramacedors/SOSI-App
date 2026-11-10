@@ -40,7 +40,7 @@ public class PerfilActivity extends BaseActivity {
             return;
         }
 
-        // ===== pegar os componentes do XML =====
+        // pegar os componentes do XML
         txtAvatar = findViewById(R.id.txtAvatar);
         txtSubtitulo = findViewById(R.id.txtSubtitulo);
         txtNome = findViewById(R.id.txtNome);
@@ -59,7 +59,7 @@ public class PerfilActivity extends BaseActivity {
                 .getReference("cidadaos")
                 .child(usuario.getUid());
 
-        // ===== botão da esquerda: "Editar Perfil" ou "Salvar" =====
+        //  botão da esquerda: "Editar Perfil" ou "Salvar"
         btnEditarPerfil.setOnClickListener(v -> {
             if (editando) {
                 salvar();
@@ -68,7 +68,7 @@ public class PerfilActivity extends BaseActivity {
             }
         });
 
-        // ===== botão da direita: "Sair" ou "Cancelar" =====
+        //  botão da direita: "Sair" ou "Cancelar"
         btnSair.setOnClickListener(v -> {
             if (editando) {
                 mostrarModoVer();   // cancela sem salvar

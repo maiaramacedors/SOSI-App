@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- .card-formulario-clicavel do painel da prefeitura.
-     txtMotivoCategoria = motivo + " — " + categoria
-     txtInfo            = cidadao.nome + " · " + cidadao.celular + " · Ocorrido em " + dataOcorrido
-     txtStatus: mesmas cores do item_meu_formulario.xml -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Card"

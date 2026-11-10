@@ -84,7 +84,7 @@ public class CadastroActivity extends AppCompatActivity {
                 }
             });
 
-            // ===== ao clicar em "Entrar": volta para o Login =====
+            //  ao clicar em "Entrar": volta para o Login
             txtEntrarLink.setOnClickListener(v -> finish());
         }
 

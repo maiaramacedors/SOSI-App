@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class HomeActivity extends BaseActivity {
 
     @Override
@@ -30,7 +28,7 @@ public class HomeActivity extends BaseActivity {
         cardAmbiente.setOnClickListener(v -> abrirFormulario());
     }
 
-    // Um método só, usado por 5 botões: evita repetir o mesmo código 5 vezes
+    // Um metodo só, usado por 5 botões: evita repetir o mesmo código 5 vezes
     private void abrirFormulario() {
         Intent intent = new Intent(this, FormularioActivity.class);
         startActivity(intent);
