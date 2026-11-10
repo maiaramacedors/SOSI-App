@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "709394376834",
+    "firebase_url": "https://sosi-31c4e-default-rtdb.firebaseio.com",
+    "project_id": "sosi-31c4e",
+    "storage_bucket": "sosi-31c4e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709394376834:android:22ac0fb1187598412d6c9b",
+        "android_client_info": {
+          "package_name": "com.example.sosi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709394376834-a330udj96ju5iqj3g7obgc3rtd0i4ug4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sosi",
+            "certificate_hash": "718c8bb74707f4ccb6e60ea6d4fc0ab0ab1ec38d"
+          }
+        },
+        {
+          "client_id": "709394376834-001rp0n6ssvl55h50m9a8a4mcsr7nai3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCFh0O02oQDCeqIEBRvr6KDoVFWfY1CtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709394376834-001rp0n6ssvl55h50m9a8a4mcsr7nai3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gaveta (menu lateral) que embrulha todas as telas que herdam da BaseActivity.
+     A tela de verdade é colocada dentro do "conteudoTela". -->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Aqui entra a tela (Home, Formulário, Painel...) -->
+    <FrameLayout
+        android:id="@+id/conteudoTela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- O menu que desliza da esquerda -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menuLateral"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/branco"
+        app:headerLayout="@layout/menu_cabecalho"
+        app:menu="@menu/menu_lateral" />
+</androidx.drawerlayout.widget.DrawerLayout>

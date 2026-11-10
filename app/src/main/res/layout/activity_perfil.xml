@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Meu Perfil: modo "ver" (layoutVisualizar) e modo "editar" (layoutEditar) na mesma tela. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".PerfilActivity">
+
+    <include layout="@layout/layout_topo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:elevation="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <TextView
+                    android:id="@+id/txtAvatar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/bg_avatar"
+                    android:gravity="center"
+                    android:textColor="@color/branco"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:text="M" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/meu_perfil"
+                    android:textColor="@color/texto"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtSubtitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/meu_perfil_txt"
+                    android:textColor="@color/texto_secundario" />
+
+                <!-- ================= MODO VER ================= -->
+                <LinearLayout
+                    android:id="@+id/layoutVisualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:text="Nome:"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtNome"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/texto"
+                            tools:text="Maiara Macedo" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divisor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:text="E-mail:"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/texto"
+                            tools:text="maiara@email.com" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divisor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:text="Celular:"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtCelular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/texto"
+                            tools:text="(19) 99999-0000" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divisor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:text="CPF:"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtCpf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/texto"
+                            tools:text="123.456.789-00" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divisor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:text="Tipo:"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/tipo_cidadao"
+                            android:textColor="@color/texto" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divisor" />
+                </LinearLayout>
+
+                <!-- ================= MODO EDITAR (começa escondido) ================= -->
+                <LinearLayout
+                    android:id="@+id/layoutEditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        style="@style/Rotulo"
+                        android:layout_marginTop="0dp"
+                        android:text="Nome completo" />
+
+                    <EditText
+                        android:id="@+id/edtNome"
+                        style="@style/Campo"
+                        android:hint="Nome completo"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName|textCapWords" />
+
+                    <TextView
+                        style="@style/Rotulo"
+                        android:text="Celular / WhatsApp" />
+
+                    <EditText
+                        android:id="@+id/edtCelular"
+                        style="@style/Campo"
+                        android:hint="(19) 99999-9999"
+                        android:importantForAutofill="no"
+                        android:inputType="phone" />
+
+                    <TextView
+                        style="@style/Rotulo"
+                        android:text="CPF" />
+
+                    <EditText
+                        android:id="@+id/edtCpf"
+                        style="@style/Campo"
+                        android:hint="Somente números"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:maxLength="14" />
+                </LinearLayout>
+
+                <!-- ================= BOTÕES ================= -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEditarPerfil"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_botao_perfil"
+                        android:stateListAnimator="@null"
+                        android:text="@string/editar_perfil"
+                        android:textAllCaps="false"
+                        android:textColor="@color/branco" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSair"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_botao_cinza"
+                        android:stateListAnimator="@null"
+                        android:text="@string/sair"
+                        android:textAllCaps="false"
+                        android:textColor="@color/branco" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

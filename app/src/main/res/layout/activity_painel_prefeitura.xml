@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FormPrefeitura.jsx — "Formulários Recebidos"  ->  GET /form/admin
+     Filtros: filtre a lista no Java conforme o RadioButton marcado em rgFiltro.
+     Clique no item abre ResponderFormularioActivity (no site é um modal). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".PainelPrefeituraActivity">
+
+    <include layout="@layout/layout_topo" />
+
+    <TextView
+        style="@style/TituloPagina"
+        android:layout_marginTop="28dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/formularios_recebidos" />
+
+    <TextView
+        style="@style/SubtituloPagina"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/formularios_recebidos_txt" />
+
+    <!-- .filtro-status -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="12dp"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:id="@+id/rgFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/filtroTodos"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/filtroTodos"
+                style="@style/Filtro"
+                android:text="@string/filtro_todos" />
+
+            <RadioButton
+                android:id="@+id/filtroAnalise"
+                style="@style/Filtro"
+                android:text="@string/status_analise" />
+
+            <RadioButton
+                android:id="@+id/filtroAndamento"
+                style="@style/Filtro"
+                android:text="@string/status_andamento" />
+
+            <RadioButton
+                android:id="@+id/filtroConcluido"
+                style="@style/Filtro"
+                android:text="@string/status_concluido" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <!-- "Carregando..." / "Nenhum formulário encontrado." -->
+    <TextView
+        android:id="@+id/txtStatusLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/carregando"
+        android:textColor="@color/texto_secundario"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFormularios"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_formulario_prefeitura" />
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cadastro.jsx  ->  POST /cidadao/cadastro  { nome, email, celular, cpf, senha } -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".CadastroActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:gravity="center"
+                    android:text="@string/criar_conta"
+                    android:textColor="@color/vinho"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <!-- Formulário (esconda e mostre txtSucesso quando cadastrar) -->
+                <LinearLayout
+                    android:id="@+id/layoutFormulario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/edtNome"
+                        style="@style/CampoLogin"
+                        android:autofillHints="name"
+                        android:hint="@string/nome_completo"
+                        android:inputType="textPersonName|textCapWords" />
+
+                    <EditText
+                        android:id="@+id/edtEmail"
+                        style="@style/CampoLogin"
+                        android:autofillHints="emailAddress"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/edtCelular"
+                        style="@style/CampoLogin"
+                        android:autofillHints="phone"
+                        android:hint="@string/celular_whatsapp"
+                        android:inputType="phone" />
+
+                    <EditText
+                        android:id="@+id/edtCpf"
+                        style="@style/CampoLogin"
+                        android:hint="@string/cpf"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:maxLength="14" />
+
+                    <EditText
+                        android:id="@+id/edtSenha"
+                        style="@style/CampoLogin"
+                        android:autofillHints="password"
+                        android:hint="@string/senha"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        android:id="@+id/txtErro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_erro"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/vinho"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        tools:text="Preencha todos os campos."
+                        tools:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCadastrar"
+                        style="@style/BotaoVinho"
+                        android:text="@string/cadastrar" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtSucesso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/cadastro_sucesso"
+                    android:textColor="#555555"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ja_tem_conta"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtEntrarLink"
+                        style="@style/Link"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/entrar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

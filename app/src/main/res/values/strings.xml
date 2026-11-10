@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SOSI</string>
+    <string name="sosi_nome">Sistema Operacional de Serviços de Indaiatuba</string>
+    <string name="copyright">© 2024 Prefeitura Municipal de Indaiatuba. Todos os direitos reservados.</string>
+
+    <!-- Barra do topo (Navbar) -->
+    <string name="logo_sos">SOS</string>
+    <string name="logo_i">I</string>
+    <string name="logo_cidade">Logo de Indaiatuba</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_formularios">Formulários</string>
+    <string name="menu_sobre">Sobre</string>
+    <string name="menu_contato">Contato</string>
+    <string name="entrar">Entrar</string>
+    <string name="sair">Sair</string>
+    <string name="perfil">Perfil</string>
+    <string name="mais_novidade">+ Novidade</string>
+    <string name="prefeitura">Prefeitura</string>
+
+    <!-- Login -->
+    <string name="sou_cidadao">Sou Cidadão</string>
+    <string name="sou_prefeitura">Sou Prefeitura</string>
+    <string name="portal_cidadao">Portal do Cidadão</string>
+    <string name="painel_prefeitura">Painel da Prefeitura</string>
+    <string name="email">E-mail</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="sem_cadastro">Ainda não tem cadastro?</string>
+    <string name="cadastre_se">Cadastre-se</string>
+
+    <!-- Cadastro -->
+    <string name="criar_conta">Criar Conta</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="celular_whatsapp">Celular / WhatsApp</string>
+    <string name="cpf">CPF</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="ja_tem_conta">Já tem conta?</string>
+    <string name="cadastro_sucesso">Cadastro realizado! Redirecionando para o login…</string>
+
+    <!-- Home -->
+    <string name="hero_linha1">Indaiatuba na palma da</string>
+    <string name="hero_linha2">sua mão.</string>
+    <string name="hero_texto">Conectando cidadãos à prefeitura. Um sistema integrado para reportar problemas, acompanhar melhorias e transformar nossa cidade juntos.</string>
+    <string name="abrir_chamado">📣  Abrir Chamado</string>
+    <string name="reportar_titulo">O que você deseja reportar?</string>
+    <string name="reportar_texto">Selecione a categoria do problema para enviar as informações.</string>
+    <string name="card_vias">Vias Públicas</string>
+    <string name="card_vias_txt">Buracos na rua, calçadas danificadas…</string>
+    <string name="card_iluminacao">Iluminação</string>
+    <string name="card_iluminacao_txt">Postes apagados ou fios caídos.</string>
+    <string name="card_transito">Trânsito</string>
+    <string name="card_transito_txt">Semáforos quebrados ou sinalização.</string>
+    <string name="card_ambiente">Meio Ambiente</string>
+    <string name="card_ambiente_txt">Árvores caídas ou lixo acumulado.</string>
+    <string name="novidades_cidade">Novidades da Cidade</string>
+    <string name="novidades_cidade_txt">Melhorias, inaugurações e novidades publicadas pela prefeitura.</string>
+    <string name="sem_novidades">Nenhuma novidade publicada ainda.</string>
+    <string name="carregando">Carregando…</string>
+
+    <!-- Formulário do cidadão -->
+    <string name="nova_ocorrencia">Nova Ocorrência</string>
+    <string name="nova_ocorrencia_txt">Preencha os dados abaixo para enviar sua solicitação à prefeitura.</string>
+    <string name="lbl_nome">👤  Nome Completo</string>
+    <string name="lbl_celular">📞  Celular / WhatsApp</string>
+    <string name="lbl_motivo">🏷️  Motivo do Formulário</string>
+    <string name="lbl_situacao">❗  Situação</string>
+    <string name="lbl_rua">📍  Rua / Local</string>
+    <string name="lbl_bairro">🗺️  Bairro</string>
+    <string name="lbl_data">📅  Data do Ocorrido</string>
+    <string name="lbl_descricao">📝  Descrição Detalhada</string>
+    <string name="lbl_foto">📷  Anexar Foto (Evidência)</string>
+    <string name="hint_rua">Ex: Av. Fábio Barnabé</string>
+    <string name="hint_bairro">Ex: Jardim Morada do Sol</string>
+    <string name="hint_data">dd/mm/aaaa</string>
+    <string name="hint_descricao">Descreva o que aconteceu, pontos de referência, etc…</string>
+    <string name="upload_icone">☁️</string>
+    <string name="upload_texto">Toque aqui para escolher a foto.</string>
+    <string name="motivo_elogio">Elogio</string>
+    <string name="motivo_reclamacao">Reclamação</string>
+    <string name="motivo_sugestao">Sugestão</string>
+    <string name="lbl_data_curto">📅  Data</string>
+    <string name="hint_bairro_curto">Ex: Morada do Sol</string>
+    <string name="upload_texto_curto">📷  Toque para anexar uma foto (opcional)</string>
+    <string name="enviar_formulario">✈️  Enviar Formulário</string>
+    <string name="ver_meus_formularios">Ver meus formulários</string>
+
+    <!-- Meus formulários -->
+    <string name="meus_formularios">Meus Formulários</string>
+    <string name="meus_formularios_txt">Acompanhe o status das solicitações que você já enviou.</string>
+    <string name="sem_ocorrencias">Você ainda não enviou nenhuma ocorrência.</string>
+    <string name="resposta_prefeitura">Resposta da prefeitura:</string>
+
+    <!-- Painel da prefeitura -->
+    <string name="formularios_recebidos">Formulários Recebidos</string>
+    <string name="formularios_recebidos_txt">Gerencie as ocorrências enviadas pelos cidadãos.</string>
+    <string name="filtro_todos">Todos</string>
+    <string name="status_analise">Em análise</string>
+    <string name="status_andamento">Em andamento</string>
+    <string name="status_concluido">Concluído</string>
+    <string name="nenhum_formulario">Nenhum formulário encontrado.</string>
+
+    <!-- Detalhe / resposta (modal do site) -->
+    <string name="lbl_cidadao">Cidadão:</string>
+    <string name="lbl_celular_curto">Celular:</string>
+    <string name="lbl_local">Local:</string>
+    <string name="lbl_data_ocorrido">Data do ocorrido:</string>
+    <string name="lbl_descricao_curto">Descrição:</string>
+    <string name="status">Status</string>
+    <string name="resposta_cidadao">Resposta ao cidadão</string>
+    <string name="hint_resposta">Escreva uma resposta para o cidadão…</string>
+    <string name="salvar_alteracoes">Salvar Alterações</string>
+
+    <!-- Novidades (prefeitura) -->
+    <string name="publicar_novidade">Publicar Novidade</string>
+    <string name="publicar_novidade_txt">Compartilhe melhorias, inaugurações e novidades sobre a cidade.</string>
+    <string name="titulo">Título</string>
+    <string name="hint_titulo">Ex: Nova praça inaugurada no Jardim Morada do Sol</string>
+    <string name="categoria">Categoria</string>
+    <string name="resumo">Resumo</string>
+    <string name="hint_resumo">Descreva a novidade…</string>
+    <string name="link_imagem">Link da imagem (opcional)</string>
+    <string name="hint_link">https://…</string>
+    <string name="novidades_publicadas">Novidades Publicadas</string>
+    <string name="excluir">Excluir</string>
+
+    <!-- Perfil -->
+    <string name="meu_perfil">Meu Perfil</string>
+    <string name="meu_perfil_txt">Informações do usuário cadastrado</string>
+    <string name="lbl_nome_curto">Nome:</string>
+    <string name="lbl_email_curto">Email:</string>
+    <string name="lbl_tipo">Tipo:</string>
+    <string name="tipo_cidadao">Cidadão</string>
+    <string name="editar_perfil">Editar Perfil</string>
+
+    <!-- Contato -->
+    <string name="contato">Contato</string>
+    <string name="contato_txt">Entre em contato com a equipe do sistema SoSi.</string>
+    <string name="contato_telefone">📞 Telefone</string>
+    <string name="contato_telefone_txt">(19) 99999-9999</string>
+    <string name="contato_email">✉️ Email</string>
+    <string name="contato_email_txt">contato@sosi.com</string>
+    <string name="contato_horario">🕒 Horário</string>
+    <string name="contato_horario_txt">Seg à Sex - 08h às 17h</string>
+    <string name="contato_central">🚨 Central</string>
+    <string name="contato_central_txt">Registro de ocorrências urbanas</string>
+
+    <!-- Sobre -->
+    <string name="nosso_proposito">Nosso Propósito</string>
+    <string name="missao">🎯  Missão</string>
+    <string name="missao_txt">Criar uma ponte digital entre os cidadãos de Indaiatuba e os serviços municipais, simplificando o reporte de problemas urbanos.</string>
+    <string name="visao">👁️  Visão</string>
+    <string name="visao_txt">Ser a principal plataforma de participação cidadã do município, promovendo uma cidade mais transparente e responsiva.</string>
+    <string name="valores">❤️  Valores</string>
+    <string name="valores_txt">Transparência, inovação, acessibilidade e compromisso com a melhoria contínua da qualidade de vida dos moradores.</string>
+
+    <!-- ===== Listas dos Spinners =====
+         O item 0 é o texto "Selecione…". No Java, use posição - 1
+         para pegar o valor do enum no array *_enum correspondente. -->
+    <string-array name="motivos">
+        <item>Selecione uma opção…</item>
+        <item>Elogio</item>
+        <item>Reclamação</item>
+        <item>Sugestão</item>
+    </string-array>
+    <string-array name="motivos_enum">
+        <item>ELOGIO</item>
+        <item>RECLAMACAO</item>
+        <item>SUGESTAO</item>
+    </string-array>
+
+    <string-array name="situacoes">
+        <item>Onde se encaixa?</item>
+        <item>Segurança</item>
+        <item>Trânsito</item>
+        <item>Ambiental</item>
+        <item>Elétrica</item>
+        <item>Patrimônio</item>
+        <item>Outro</item>
+    </string-array>
+    <string-array name="situacoes_enum">
+        <item>SEGURANCA</item>
+        <item>TRANSITO</item>
+        <item>AMBIENTAL</item>
+        <item>ELETRICA</item>
+        <item>PATRIMONIO</item>
+        <item>OUTRO</item>
+    </string-array>
+
+    <!-- Status no painel (sem item "Selecione": posição = índice do enum) -->
+    <string-array name="status_lista">
+        <item>Em análise</item>
+        <item>Em andamento</item>
+        <item>Concluído</item>
+    </string-array>
+    <string-array name="status_enum">
+        <item>EM_ANALISE</item>
+        <item>EM_ANDAMENTO</item>
+        <item>CONCLUIDO</item>
+    </string-array>
+
+    <!-- Categorias de novidade (texto livre no backend) -->
+    <string-array name="categorias_novidade">
+        <item>Selecione uma opção…</item>
+        <item>Melhoria</item>
+        <item>Inauguração</item>
+        <item>Novidade</item>
+        <item>Evento</item>
+        <item>Aviso</item>
+    </string-array>
+</resources>

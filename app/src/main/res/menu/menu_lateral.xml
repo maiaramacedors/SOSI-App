@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/grupoPrincipal">
+        <item android:id="@+id/navInicio" android:title="🏠   Início" />
+        <item android:id="@+id/navNovaOcorrencia" android:title="📣   Nova ocorrência" />
+        <item android:id="@+id/navMeusFormularios" android:title="📋   Meus formulários" />
+        <item android:id="@+id/navPainel" android:title="📊   Painel da prefeitura" />
+        <item android:id="@+id/navPerfil" android:title="👤   Meu perfil" />
+    </group>
+
+    <group android:id="@+id/grupoInfo">
+        <item android:id="@+id/navSobre" android:title="ℹ️   Sobre" />
+        <item android:id="@+id/navContato" android:title="📞   Contato" />
+    </group>
+
+    <group android:id="@+id/grupoConta">
+        <item android:id="@+id/navEntrar" android:title="🔑   Entrar" />
+        <item android:id="@+id/navSair" android:title="🚪   Sair" />
+    </group>
+</menu>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Meus Formulários" (parte de baixo do FormCidadao.jsx)  ->  GET /form/cidadao/{id} -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".MeusFormulariosActivity">
+
+    <include layout="@layout/layout_topo" />
+
+    <TextView
+        style="@style/TituloPagina"
+        android:layout_marginTop="28dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/meus_formularios" />
+
+    <TextView
+        style="@style/SubtituloPagina"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/meus_formularios_txt" />
+
+    <!-- "Carregando..." / "Você ainda não enviou nenhuma ocorrência." -->
+    <TextView
+        android:id="@+id/txtStatusLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="@string/carregando"
+        android:textColor="@color/texto_secundario" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMeusFormularios"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_meu_formulario" />
+</LinearLayout>

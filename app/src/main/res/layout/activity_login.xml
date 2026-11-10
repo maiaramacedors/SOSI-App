@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Login: topo escuro com a marca + cartão branco "subindo" por cima.
+     Os ids são os mesmos de antes: a LoginActivity continua funcionando igual. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raizLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:fillViewport="true"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- ===== TOPO ESCURO COM A MARCA ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hero"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="64dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="80dp">
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:contentDescription="@string/logo_cidade"
+                android:elevation="4dp"
+                android:src="@drawable/logo_indaiatuba" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.05"
+                    android:text="@string/logo_sos"
+                    android:textColor="@color/branco"
+                    android:textSize="42sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.05"
+                    android:text="@string/logo_i"
+                    android:textColor="@color/vermelho"
+                    android:textSize="42sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="@string/sosi_nome"
+                android:textColor="#BBBBBB"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- ===== CARTÃO BRANCO (sobe por cima do topo escuro) ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-56dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_card"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Abas -->
+            <RadioGroup
+                android:id="@+id/rgAbas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_abas"
+                android:checkedButton="@+id/abaCidadao"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <RadioButton
+                    android:id="@+id/abaCidadao"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_aba"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/sou_cidadao"
+                    android:textColor="@color/texto_filtro"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/abaPrefeitura"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_aba"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/sou_prefeitura"
+                    android:textColor="@color/texto_filtro"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/txtTituloLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/portal_cidadao"
+                android:textColor="@color/vinho"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="22dp"
+                android:gravity="center"
+                android:text="Acesse sua conta para continuar"
+                android:textColor="@color/texto_secundario"
+                android:textSize="14sp" />
+
+            <!-- Campos -->
+            <EditText
+                android:id="@+id/edtLogin"
+                style="@style/CampoLogin"
+                android:autofillHints="emailAddress"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/edtSenha"
+                style="@style/CampoLogin"
+                android:layout_marginBottom="6dp"
+                android:autofillHints="password"
+                android:hint="@string/senha"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/txtEsqueciSenha"
+                style="@style/Link"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:text="Esqueci minha senha"
+                android:textSize="13sp" />
+
+            <!-- Erro -->
+            <TextView
+                android:id="@+id/txtErro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_erro"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/vinho"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:text="E-mail ou senha incorretos."
+                tools:visibility="visible" />
+
+            <!-- Entrar -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEntrar"
+                style="@style/BotaoVinho"
+                android:elevation="4dp"
+                android:text="@string/entrar" />
+
+            <ProgressBar
+                android:id="@+id/progresso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:visibility="gone" />
+
+            <!-- "ou" + Google (somem na aba Prefeitura) -->
+            <LinearLayout
+                android:id="@+id/layoutGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/campo_borda" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="ou"
+                        android:textColor="@color/texto_claro"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/campo_borda" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnGoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_campo_login"
+                    android:stateListAnimator="@null"
+                    android:text="Continuar com Google"
+                    android:textAllCaps="false"
+                    android:textColor="@color/texto"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Cadastro (some na aba Prefeitura) -->
+            <LinearLayout
+                android:id="@+id/layoutCadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sem_cadastro"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtCadastrese"
+                    style="@style/Link"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/cadastre_se" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Rodapé discreto -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Prefeitura Municipal de Indaiatuba"
+            android:textColor="@color/texto_claro"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

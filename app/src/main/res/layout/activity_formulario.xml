@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FormCidadao.jsx — "Nova Ocorrência" (versão compacta para celular)
+     POST /form  {
+        motivo:      ELOGIO / RECLAMACAO / SUGESTAO  (RadioButton marcado em rgMotivo),
+        categoria:   situacoes_enum[spSituacao.pos - 1],
+        endereco:    rua + " - " + bairro,
+        dataOcorrido, descricao, anexo: "",
+        cidadao: { id, nome, celular, email }  (do usuário logado)
+     }
+     txtUsuario mostra "nome · celular" do usuário logado (no site são campos travados). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".FormularioActivity">
+
+    <include layout="@layout/layout_topo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/TituloPagina"
+                android:text="@string/nova_ocorrencia"
+                android:textSize="24sp" />
+
+            <TextView
+                style="@style/SubtituloPagina"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="14dp"
+                android:text="@string/nova_ocorrencia_txt"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                style="@style/Card"
+                android:padding="16dp">
+
+                <!-- Quem está enviando (substitui os campos travados Nome e Celular) -->
+                <TextView
+                    android:id="@+id/txtUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_resposta"
+                    android:padding="10dp"
+                    android:textColor="@color/texto_medio"
+                    android:textSize="14sp"
+                    tools:text="👤  Maiara Macedo  ·  (19) 99999-0000" />
+
+                <!-- Motivo: 3 botões lado a lado em vez de Spinner -->
+                <TextView
+                    style="@style/RotuloCompacto"
+                    android:text="@string/lbl_motivo" />
+
+                <RadioGroup
+                    android:id="@+id/rgMotivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbElogio"
+                        style="@style/OpcaoMotivo"
+                        android:text="@string/motivo_elogio" />
+
+                    <RadioButton
+                        android:id="@+id/rbReclamacao"
+                        style="@style/OpcaoMotivo"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:text="@string/motivo_reclamacao" />
+
+                    <RadioButton
+                        android:id="@+id/rbSugestao"
+                        style="@style/OpcaoMotivo"
+                        android:text="@string/motivo_sugestao" />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/RotuloCompacto"
+                    android:text="@string/lbl_situacao" />
+
+                <Spinner
+                    android:id="@+id/spSituacao"
+                    style="@style/CampoSpinner"
+                    android:minHeight="46dp"
+                    android:entries="@array/situacoes" />
+
+                <TextView
+                    style="@style/RotuloCompacto"
+                    android:text="@string/lbl_rua" />
+
+                <EditText
+                    android:id="@+id/edtRua"
+                    style="@style/Campo"
+                    android:minHeight="46dp"
+                    android:hint="@string/hint_rua"
+                    android:importantForAutofill="no"
+                    android:inputType="textPostalAddress|textCapWords" />
+
+                <!-- Bairro e Data lado a lado -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1.4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/RotuloCompacto"
+                            android:text="@string/lbl_bairro" />
+
+                        <EditText
+                            android:id="@+id/edtBairro"
+                            style="@style/Campo"
+                            android:minHeight="46dp"
+                            android:hint="@string/hint_bairro_curto"
+                            android:importantForAutofill="no"
+                            android:inputType="textCapWords" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/RotuloCompacto"
+                            android:text="@string/lbl_data_curto" />
+
+                        <!-- Abra um DatePickerDialog no clique -->
+                        <EditText
+                            android:id="@+id/edtData"
+                            style="@style/Campo"
+                            android:minHeight="46dp"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:hint="@string/hint_data"
+                            android:importantForAutofill="no"
+                            android:inputType="none" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/RotuloCompacto"
+                    android:text="@string/lbl_descricao" />
+
+                <EditText
+                    android:id="@+id/edtDescricao"
+                    style="@style/Campo"
+                    android:gravity="top|start"
+                    android:hint="@string/hint_descricao"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minHeight="90dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+                <!-- Foto: faixa tracejada baixa, ícone e texto na mesma linha -->
+                <LinearLayout
+                    android:id="@+id/areaUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_upload"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/txtUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/upload_texto_curto"
+                        android:textColor="@color/texto_secundario"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imgFoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="@string/lbl_foto"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEnviar"
+                    style="@style/BotaoEnviar"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/enviar_formulario" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtMeusFormularios"
+                style="@style/Link"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:text="@string/ver_meus_formularios"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estilos que imitam as classes CSS do site. Não dependem do tema do projeto. -->
+
+    <!-- .page-header h2 -->
+    <style name="TituloPagina">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <!-- .page-header p -->
+    <style name="SubtituloPagina">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <!-- .form-group label -->
+    <style name="Rotulo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texto_medio</item>
+    </style>
+
+    <!-- Rótulo com menos espaço (formulário compacto) -->
+    <style name="RotuloCompacto" parent="Rotulo">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Botões de Motivo (Elogio / Reclamação / Sugestão) -->
+    <style name="OpcaoMotivo">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_filtro</item>
+        <item name="android:textColor">@color/texto_filtro</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- input / select / textarea do forms.css -->
+    <style name="Campo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:background">@drawable/bg_campo</item>
+        <item name="android:textColor">@color/texto</item>
+        <item name="android:textColorHint">@color/texto_claro</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CampoSpinner" parent="Campo">
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">36dp</item>
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+
+    <!-- .login-box input (mais arredondado) -->
+    <style name="CampoLogin" parent="Campo">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:background">@drawable/bg_campo_login</item>
+    </style>
+
+    <!-- Botões: use androidx.appcompat.widget.AppCompatButton para o
+         fundo personalizado não ser trocado pelo tema Material. -->
+    <style name="BotaoBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- .btn-submit (vermelho, formato pílula) -->
+    <style name="BotaoEnviar" parent="BotaoBase">
+        <item name="android:background">@drawable/bg_botao_vermelho</item>
+    </style>
+
+    <!-- .login-box button (vinho) -->
+    <style name="BotaoVinho" parent="BotaoBase">
+        <item name="android:background">@drawable/bg_botao_vinho</item>
+    </style>
+
+    <!-- link em vinho, negrito -->
+    <style name="Link">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/vinho</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- .card-formulario / .form-box -->
+    <style name="Card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <!-- .badge-status -->
+    <style name="Badge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- .filtro-status button -->
+    <style name="Filtro">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_filtro</item>
+        <item name="android:textColor">@color/texto_filtro</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- .menu li a (navbar) -->
+    <style name="MenuTopo">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:layout_marginEnd">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_menu_topo</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- links da direita na navbar -->
+    <style name="LinkTopo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- .tag-prefeitura / .tag-prefeitura-label -->
+    <style name="TagTopo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--  Cores tiradas do CSS do site SOSI  -->
+    <color name="preto">#000000</color>
+    <color name="menu_item">#141414</color>
+    <!--  rgba(255,255,255,0.08) sobre preto  -->
+    <color name="vinho">#8B1020</color>
+    <!--  login, abas, títulos, perfil  -->
+    <color name="vinho_escuro">#6F0D1A</color>
+    <!--  hover/pressionado  -->
+    <color name="vermelho">#FF4757</color>
+    <!--  primary-accent do site  -->
+    <color name="vermelho_escuro">#FF2E43</color>
+    <color name="vermelho_claro">#FFF0F1</color>
+    <!--  fundo dos ícones  -->
+    <color name="erro_fundo">#FBEAEC</color>
+    <color name="fundo">#F0F0F0</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="campo_fundo">#F9F9F9</color>
+    <color name="campo_borda">#DDDDDD</color>
+    <color name="abas_fundo">#F2F2F2</color>
+    <color name="cinza_resposta">#F7F7F7</color>
+    <color name="divisor">#EEEEEE</color>
+    <color name="texto">#222222</color>
+    <color name="texto_medio">#444444</color>
+    <color name="texto_secundario">#666666</color>
+    <color name="texto_claro">#888888</color>
+    <color name="texto_hero">#DDDDDD</color>
+    <color name="tag_escura">#333333</color>
+    <!--  Badges de status (.badge-EM_ANALISE etc.)  -->
+    <color name="status_analise_fundo">#FFF3CD</color>
+    <color name="status_analise_texto">#92700D</color>
+    <color name="status_andamento_fundo">#CFE2FF</color>
+    <color name="status_andamento_texto">#0A4A9E</color>
+    <color name="status_concluido_fundo">#D4EDDA</color>
+    <color name="status_concluido_texto">#1E7E34</color>
+</resources>
