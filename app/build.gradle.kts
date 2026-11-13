@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.firebase.database)
     implementation(libs.googleid)
     implementation(libs.material)
+    implementation("com.google.android.gms:play-services-location:21.4.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
